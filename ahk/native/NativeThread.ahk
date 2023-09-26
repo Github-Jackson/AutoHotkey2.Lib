@@ -8,7 +8,7 @@
 #Include <ahk\native\Native>
 /** 于操作系统层面实现的原生线程
  * @alias ThreadNative <ahk\lang\ThreadNative>
- * @classdesc 命名为了规避Thread函数, 只能加前后最T_T
+ * @classdesc 命名为了规避Thread函数, 只能加前后缀T_T
  */
 class NativeThread {
   /** @prop {Number} Handle 线程句柄 */
@@ -23,6 +23,20 @@ class NativeThread {
     this.ThreadId := threadId
   }
 
+  Suspend(){
+    return Native.SuspendThread(this.Handle)
+  }
+
+  Resume(){
+    return Native.ResumeThread(this.Handle)
+  }
+
+  /** 暂停当前线程的执行，直到超时间隔结束。
+   * @param {Number} Milliseconds 超时间隔(毫秒)
+   */
+  Sleep(Milliseconds:=0){
+    return Native.Sleep(Milliseconds)
+  }
   /** 关闭线程句柄, 需要注意的是，关闭线程句柄后，相关的系统资源将被释放，
    * 但线程的执行状态和上下文信息将保留一段时间，直到操作系统回收内存。
    * 因此，关闭线程句柄不会立即终止线程的执行，

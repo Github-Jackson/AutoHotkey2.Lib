@@ -6,7 +6,7 @@
  * @version 0.0.1
  ***********************************************************************/
 
-/** 用于DllCall的类型值对 */
+/** 用于NativeCall(DllCall)的(Type-Value)对 */
 class NativeType {
   /** @prop {String} Type 类型 */
   Type := unset
@@ -22,9 +22,9 @@ class NativeType {
   }
 
   /** 返回(this.Value)
-   * @returns {Any} this.Value 
+   * @returns {*} this.Value 
    */
-  Call() {
+  Call() {  
     return this.Value
   }
 
