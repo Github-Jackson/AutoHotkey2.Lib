@@ -6,14 +6,12 @@
  * @version 0.0.1
  ***********************************************************************/
 
-/** 构建一个代理对象 */
+/** 构建代理 */
 class Proxy {
+  /** 构建{Target}代理对象 */
   __New(Target) {
     this.DefineProp('__Get', {
       Call: (this, Key, Params) {
-        if(Key == 'this') {
-          return Target
-        }
         return Target.%Key%[Params*]
       }
     })

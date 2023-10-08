@@ -39,7 +39,9 @@ class FileProxy {
    * @param {Array} Params 
    */
   __Call(Name, Params) {
-    return this.File.GetMethod(Name).Call(this.File, Params*)
+    ; return this.File.GetMethod(Name).Call(this.File, Params*)
+    /** 性能优势 1200ms -> 800ms */
+    return this.File.%Name%(Params*)
   }
   /** 打开文件, 从其中读取特定内容和/或将新内容写入其中.
    * @param {String} Filename 文件名

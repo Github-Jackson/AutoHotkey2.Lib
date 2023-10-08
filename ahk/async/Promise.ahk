@@ -6,8 +6,39 @@
  * @version 0.0.1
  ***********************************************************************/
 
+#Include <ahk\lang\Proxy>
+
 class Promise {
-  __New() {
-    
+  /**
+   * 
+   * @param {PromiseExecutory} Executory 
+   */
+  __New(Executory) {
+    Resolve(Data) {
+      return this
+    }
+    Reject(Value) {
+
+    }
+  }
+
+  /**
+   * 
+   * @param {(Result)=>Any} PromiseCallback 
+   * @returns {Promise} 
+   */
+  Then(PromiseCallback) {
+    return this
+  }
+
+  /**
+   * 
+   * @param {(Error)=>Any} ErrorCallback 
+   */
+  Catch(ErrorCallback){
+
+  }
+  Finally(){
+    return this
   }
 }
