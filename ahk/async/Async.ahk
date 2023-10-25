@@ -12,7 +12,18 @@
  * @param {Number} Priority 异步执行的优先级-2147483648~2147483647
  * @returns {()=>Void} {Action} 定时器标识, 用于SetTimer停止定时器或更新定时器延迟,优先级
  */
-Async(Action, Delay := 0, Priority := -1) {
-  SetTimer(Action, Delay == 0 ? -1 : -Abs(Delay), Priority)
+Async(Action, Delay := 0, Priority?) {
+  static PrivatePriority := -1
+  if(IsSet(Priority)){
+    SetTimer(Action, Delay == 0 ? -1 : -Abs(Delay), Priority)
+  }else{
+    Call(Action){
+      PrivatePriority++
+      Action()
+    }
+    Action := Call.Bind(Action)
+    SetTimer(Action, Delay == 0 ? -1 : -Abs(Delay), PrivatePriority--)
+  }
+  
   return Action
 }

@@ -28,6 +28,7 @@ class ahk {
   class Array extends Array {
     static __New() {
       ahk.Setup.Array := () {
+        Array.Prototype.Call := ahk.Array.Prototype.Call
         Array.Prototype.DefineProp('__Call', {
           Call: (this, Name, Params) {
             method := ahk.Array.Prototype.GetMethod(Name)
@@ -42,18 +43,36 @@ class ahk {
       }
     }
 
+    /** 将数组中每一项视为(Function)调用执行, 传递{Params*}
+     * 需自行处理函数项调用时的参数个数匹配
+     * @param {Array} Params Array<Any>
+     * @returns {ahk.Array} this
+     */
+    Call(Params*){
+      for (index,item in this) {
+        item(Params*)
+      }
+      return this
+    }
+
     /** 判断数组的每一项是否都满足{Predicate(Item,Index?)=>Boolean}条件函数. 并返回结果
      * @param {(Item,Index?)=>Boolean} Predicate 判断函数: 返回True表示满足
      * @returns {Boolean} 是否数组的每一项都满足条件{Predicate(Item,Index?)=>Boolean}
      */
     Every(Predicate) {
       result := true
-      if(Predicate.MaxParams == 1){
-        for (index,item in this) {
+      if (Predicate.MaxParams == 1) {
+        for (index, item in this) {
           result |= Predicate(item)
         }
       }
-      
+
+    }
+    /**
+     * 
+     */
+    Each(FunctionName) {
+
     }
     /** 循环数组调用{Call(Item,Index)}
      * @param {(Item,Index?)=>Void} Call 
@@ -71,6 +90,7 @@ class ahk {
       }
       return this
     }
+
     /** 返回通过{Predicate(Item,Index?)=>Any|unset}函数筛选后的项数组
      * @param {(Item,Index?)=>Any|unset} Predicate 筛选函数: 若跳过该项,返回unset
      * @returns {ahk.Array} 筛选后的数组

@@ -18,8 +18,9 @@ class Promise {
       return this
     }
     Reject(Value) {
-
+      
     }
+    Executory(Resolve,Reject)
   }
 
   /**
