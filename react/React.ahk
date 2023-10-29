@@ -59,8 +59,8 @@ class ReactTest extends React {
     return this
   }
   /** 响应式的Msgbox */
-  ReactProp := (this, title := 'reack') {
-    MsgBox(this.Prop,)
+  ReactProp := (this) {
+    MsgBox(this.Prop)
   }
   /** 响应式的ToolTip */
   ReactTooltip := (this) {
@@ -73,7 +73,6 @@ class ReactTest extends React {
   var.Prop := 'ssss'
   var.ReactProp
   Async(() {
-    var.Test := 'ceshi tooltip'
     var.Prop := 'double'
   }, 500)
 })()

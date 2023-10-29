@@ -7,22 +7,25 @@
  ***********************************************************************/
 
 #Include <ahk\lang\Proxy>
+#Include Async.ahk
 
 class Promise {
   /**
    * 
-   * @param {PromiseExecutory} Executory 
+   * @param {Promise.Executory} Executory 
    */
   __New(Executory) {
     Resolve(Data) {
       return this
     }
-    Reject(Value) {
-      
-    }
-    Executory(Resolve,Reject)
-  }
+    Reject(Error) {
 
+    }
+    Async(Executory.Bind(Resolve, Reject))
+  }
+  class Executory extends Func {
+
+  }
   /**
    * 
    * @param {(Result)=>Any} PromiseCallback 
@@ -36,10 +39,25 @@ class Promise {
    * 
    * @param {(Error)=>Any} ErrorCallback 
    */
-  Catch(ErrorCallback){
+  Catch(ErrorCallback) {
 
   }
-  Finally(){
+  Finally() {
     return this
+  }
+  static Resolve(Data) {
+
+  }
+  static Reject(Error) {
+
+  }
+  static All(Promises*) {
+
+  }
+  static Any(Promises*) {
+
+  }
+  static Race(Promises*) {
+
   }
 }

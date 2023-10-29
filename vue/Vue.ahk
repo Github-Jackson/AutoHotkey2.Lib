@@ -84,7 +84,7 @@ class Vue {
       }
     }
   }
-
+  /** 用于标识具备Vue响应式的类 */
   class Object {
 
   }
