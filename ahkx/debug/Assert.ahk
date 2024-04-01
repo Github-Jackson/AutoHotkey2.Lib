@@ -39,7 +39,7 @@ class Assert {
     if(this.Target == Value){
       return this
     }
-    throw AssertionError('目标不想等')
+    throw(AssertionError('目标不想等'))
   }
   ;@Ahk2Exe-IgnoreEnd
 }
