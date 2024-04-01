@@ -11,11 +11,11 @@
 ;scheduler track trigger
 
 class Vue {
-  /** @prop {Array} Effect */
+  /** @type {Array} */
   static Effect := unset
-  /** @prop {Vue} Vue */
+  /** @type {Vue} */
   static Vue := unset
-  /** @prop {Map} Subscriptions */
+  /** @type {Map} */
   static Subscriptions := unset
 
   static __New() {
@@ -35,7 +35,7 @@ class Vue {
     this.Effect.Pop()
     return Vue.Vue
   }
-  /** @prop {Boolean} Updating 用于标识是否在Vue 响应式 Update态中 */
+  /** @type {Boolean} 用于标识是否在Vue 响应式 Update态中 */
   ; Updating := false
 
   /**

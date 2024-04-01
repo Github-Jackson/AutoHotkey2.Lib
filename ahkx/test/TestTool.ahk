@@ -9,12 +9,12 @@
 /** 测试工具类 */
 class TestTool {
 
-  /** @prop {Array} Queue Array\<Call\> 测试计时队列 */
+  /** @type {Array} Array\<Call\> 测试计时队列 */
   static Queue := []
-  /** @prop {Number} TickCount A_TickCount */
+  /** @type {Number} A_TickCount */
   static TickCount := A_TickCount
 
-  /** @prop {()=>Void} Exec 目标测试对象 */
+  /** @type {()=>Void} 目标测试对象 */
   Exec := unset
   /** 创建用于测试目标函数(fn)的工具对象
    * @param {()=>Void} Call 用于测试的目标执行对象

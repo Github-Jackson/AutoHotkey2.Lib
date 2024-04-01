@@ -9,7 +9,7 @@
 /** @async 封装SetTimer实现异步函数执行类, 用于异步执行函数,并返回结果
  */
 class Subroutine {
-  /** @prop {Func} Action 异步执行的目标函数 */
+  /** @type {Func} 异步执行的目标函数 */
   Action := unset
   /** 创建一个SetTimer实现的异步函数执行对象, 异步执行函数将结果传入回调函数
    * @param {Func} Action 子程序要执行的函数对象
@@ -26,19 +26,20 @@ class Subroutine {
     SetTimer(() {
       callback.Result := (this.Action)(Params*)
       if (callback.HasProp('Functions'))
-        loop callback.Functions.Length
+        loop callback.Functions.Length{
           callback.Functions.Pop()(callback.Result)
+        }
     }, -1, -1)
     return callback
   }
 
   class Callback {
-    /** @prop {Any} Result Subroutine的执行结果 */
+    /** @type {Any} Subroutine的执行结果 */
     Result := unset
-    /** @prop {Array} Functions 回调函数队列 */
-    Functions := unset
+    /** @type {Array<Subroutine>} 回调函数队列 */
+    Functions := []
     /** Subroutine的回调, 被调用的函数具有一个参数(Result), 为Subroutine执行结果
-     * @param {Array} Functions `Array<(Result)=> Void>` 回调函数列表
+     * @param {Array<(Result)=>void>} Functions `Array<(Result)=> Void>` 回调函数列表
      * @returns {Subroutine.Callback} this
      */
     Call(Functions*) {

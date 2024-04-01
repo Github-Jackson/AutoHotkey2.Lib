@@ -14,7 +14,7 @@
  * @extends {NativePointer}
  */
 class NativeStrP extends NativePointer {
-  /** @prop {String} Type StrP */
+  /** @type {String} StrP */
   static Type := NativeType.StrP
 
   /** 创建一个用于DllCall|NativeCall的原生字符串对象

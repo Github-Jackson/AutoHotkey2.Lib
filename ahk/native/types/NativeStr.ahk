@@ -18,7 +18,7 @@
  * @extends {NativeType}
  */
 class NativeStr extends NativeType {
-  /** @prop {String} Type Str */
+  /** @type {String} Str */
   static Type := NativeType.Str
 
   /** 创建一个用于DllCall|NativeCall的原生字符串对象

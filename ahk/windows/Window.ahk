@@ -12,7 +12,7 @@
  */
 
 class Window extends WindowPack {
-  /** @prop {Number} HWND */
+  /** @type {Number} */
   HWND := unset
   /** 实例化窗口对象, 保存目标窗口ID(HWND)
    * @overload (HWND)

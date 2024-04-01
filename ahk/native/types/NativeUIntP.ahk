@@ -11,7 +11,7 @@
  * @extends {NativePointer}
  */
 class NativeUIntP extends NativePointer {
-  /** @prop {String} Type UInt* */
+  /** @type {String} UInt* */
   static Type:= NativeType.UIntP
   /**
    * @param {Number} Value 无符号32位整数

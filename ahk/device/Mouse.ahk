@@ -9,7 +9,7 @@
 
 /** Mouse系列内置函数的封装 */
 class Mouse {
-  /** @prop {Number} DefaultMouseSpeed 没有指定鼠标速度时使用的速度(默认鼠标速度为2),介于0(最快)-100(最慢).
+  /** @type {Number} 没有指定鼠标速度时使用的速度(默认鼠标速度为2),介于0(最快)-100(最慢).
    * 设置在 Click, MouseMove, MouseClick 和 MouseClickDrag 中没有指定鼠标速度时使用的速度.
    */
   static DefaultMouseSpeed {
@@ -20,7 +20,7 @@ class Mouse {
       SetDefaultMouseSpeed(Value)
     }
   }
-  /** @prop {Point} Position 获取和设置鼠标的位置 */
+  /** @type {Point} 获取和设置鼠标的位置 */
   static Position {
     get {
       return this.GetPos()
@@ -29,7 +29,7 @@ class Mouse {
       this.Move(Value)
     }
   }
-  /** @prop {Number} 设置每次鼠标动作(移动或单击)后的延迟(毫秒)
+  /** @type {Number} 设置每次鼠标动作(移动或单击)后的延迟(毫秒)
    * 时间(单位为毫秒). 指定 -1 表示无延时, 或 0 表示最小延时
    * (然而, 如果使用了 Play 参数, 则 0 和 -1 都表示无延时).
    */
@@ -103,7 +103,7 @@ class Mouse {
   }
 
   class PositionDesc {
-    /** @prop {Point} Point 鼠标坐标*/
+    /** @type {Point} 鼠标坐标*/
     Point := unset
     WindowID := unset
     ControlHWND := unset

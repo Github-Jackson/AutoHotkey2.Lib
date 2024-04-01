@@ -16,21 +16,21 @@
  * ```
  */
 class Task {
-  /** @prop {Func} Action 执行对象 */
+  /** @type {Func} 执行对象 */
   Action := unset
-  /** @prop {Number} Priority 任务优先级, -2147483648~2147483647之间 */
+  /** @type {Number} 任务优先级, -2147483648~2147483647之间 */
   Priority := unset
 
   ;#region 事件回调函数属性列表
-  /** @prop {()=>Boolean} _HandleStart */
+  /** @type {()=>Boolean} */
   _HandleStart := unset
-  /** @prop {(Error)=>Any} _HandleCatch */
+  /** @type {(Error)=>Any} */
   _HandleCatch := unset
-  /** @prop {(Result)=>Void} _HandleSuccess */
+  /** @type {(Result)=>Void} */
   _HandleSuccess := unset
-  /** @prop {()=>Void} _HandleError */
+  /** @type {()=>Void} */
   _HandleError := unset
-  /** @prop {(Error)=>Void} _HandleFinally */
+  /** @type {(Error)=>Void} */
   _HandleFinally := unset
   ;#endregion
 

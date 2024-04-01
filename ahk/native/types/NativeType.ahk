@@ -8,9 +8,9 @@
 
 /** 用于NativeCall(DllCall)的(Type-Value)对 */
 class NativeType {
-  /** @prop {String} Type 类型 */
+  /** @type {String} 类型 */
   Type := unset
-  /** @prop {Number|String|Buffer} Value 值 */
+  /** @type {Number|String|Buffer} 值 */
   Value := unset
   /**
    * @param {String} Type  Str | WStr | AStr | Int64 | Int | Short |

@@ -11,7 +11,7 @@ ahk.Setup()
 /** ahk的基础扩展, 包括一些内置类, 内置方法的扩展 */
 class ahk {
   class Setup {
-    /** @prop {()=>Void} Array */
+    /** @type {()=>Void} Array */
     static Array := unset
     static Call() {
       for (key, value in ahk.Setup.OwnProps()) {

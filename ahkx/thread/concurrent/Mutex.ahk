@@ -10,9 +10,9 @@
 /** 原生实现用于并发同步的互斥锁
  */
 class Mutex {
-  /** @prop {String} Name 互斥对象的名称 */
+  /** @type {String} 互斥对象的名称 */
   Name := unset
-  /** @prop {Number} Handle 互斥对象初始化时的句柄 */
+  /** @type {Number} 互斥对象初始化时的句柄 */
   Handle := unset
 
   /** 创建互斥对象

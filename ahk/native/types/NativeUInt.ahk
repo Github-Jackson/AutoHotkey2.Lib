@@ -11,7 +11,7 @@
  * @extends {NativeType}
  */
 class NativeUInt extends NativeType {
-  /** @prop {String} Type UInt */
+  /** @type {String} UInt */
   static Type:= NativeType.UInt
   /** 创建一个用于DllCall|NativeCall的无符号32位整数对象
    * @param {Number} Value 无符号32位整数

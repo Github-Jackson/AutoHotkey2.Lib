@@ -13,7 +13,7 @@
  * @extends {NativeType}
  */
 class NativeHResult extends NativeType {
-  /** @prop {String} Type HRESULT */
+  /** @type {String} HRESULT */
   static Type := NativeType.HRESULT
   __New(Value) {
     super.__New(NativeHResult.Type,Value)

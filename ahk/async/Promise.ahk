@@ -49,7 +49,7 @@ class Promise {
 
   }
   static Reject(Error) {
-
+    
   }
   static All(Promises*) {
 

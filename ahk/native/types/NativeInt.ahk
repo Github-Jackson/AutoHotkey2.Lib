@@ -11,7 +11,7 @@
  * @extends {NativeType}
  */
 class NativeInt extends NativeType {
-  /** @prop {String} Type Int */
+  /** @type {String} Int */
   static Type:= NativeType.Int
   /** 创建一个用于DllCall|NativeCall的有符号32位整数对象
    * @param {Number} Value 有符号32位整数

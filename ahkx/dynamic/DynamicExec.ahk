@@ -9,7 +9,7 @@
 
 /** 使用WScript.Shell.Exec Autohotkey * 实现的动态执行类 */
 class DynamicExec {
-  /** @prop {WScript.Exec} _Executor */
+  /** @type {WScript.Exec} */
   _Executor := unset
   __New() {
     static WSH := WScript()

@@ -10,13 +10,13 @@
  */
 class Timer {
 
-  /** @prop {Function} Callback 回调函数: SetTimer以该对象标识唯一性用于管理和删除Timer, 请不要修改该属性 */
+  /** @type {Function} 回调函数: SetTimer以该对象标识唯一性用于管理和删除Timer, 请不要修改该属性 */
   Callback := unset
-  /** @prop {Number} Priority 计时器的优先级 -2147483648~2147483647 */
+  /** @type {Number} 计时器的优先级 -2147483648~2147483647 */
   Priority := unset
-  /** @prop {Number} Period 执行周期(毫秒) */
+  /** @type {Number} 执行周期(毫秒) */
   Period := unset
-  /** @prop {Number} Delay 设置启动延迟(毫秒) */
+  /** @type {Number} 设置启动延迟(毫秒) */
   Delay := 0
 
   /** 初始化Timer并注册(SetTimer)定时器

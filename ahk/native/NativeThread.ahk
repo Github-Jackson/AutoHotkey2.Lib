@@ -11,9 +11,9 @@
  * @classdesc 命名为了规避Thread函数, 只能加前后缀T_T
  */
 class NativeThread {
-  /** @prop {Number} Handle 线程句柄 */
+  /** @type {Number} 线程句柄 */
   Handle := unset
-  /** @prop {Number} ThreadId 线程ID*/
+  /** @type {Number} 线程ID*/
   ThreadId := unset
   /** 创建一个原生线程, 将(Callback)作为入口函数执行
    * @param {Func} Callback

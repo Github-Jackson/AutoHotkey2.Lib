@@ -10,7 +10,7 @@ class WindowGroup extends Any{
   static DefaultGroupName {
     get => 'DefaultGroup'
   }
-  /** @prop {String} Name 窗口组名称, 组名不区分大小写. */
+  /** @type {String} 窗口组名称, 组名不区分大小写. */
   Name := unset
   /** 创建一个Window Group 窗口组
    * @param {String} GroupName 窗口组名称, 组名不区分大小写.

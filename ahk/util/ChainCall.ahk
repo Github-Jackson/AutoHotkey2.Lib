@@ -13,7 +13,7 @@
 class ChainCall {
   /** 链式调用的中间结果代理 */
   class Proxy extends Proxy {
-    /** @prop {*} this 代理的目标对象 */
+    /** @type {*} 代理的目标对象 */
     this := unset
     __New(Target) {
       this.this := this

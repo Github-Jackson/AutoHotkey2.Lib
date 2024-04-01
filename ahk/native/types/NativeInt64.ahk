@@ -11,7 +11,7 @@
  * @extends {NativeType}
  */
 class NativeInt64 extends NativeType {
-  /** @prop {String} Type Int64 */
+  /** @type {String} Int64 */
   static Type:= NativeType.Int64
   /** 创建一个用于DllCall|NativeCall的64位整数对象
    * @param {Number} Value 有符号64位整数

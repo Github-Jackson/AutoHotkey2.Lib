@@ -8,7 +8,7 @@
 
 /** Process系列内置函数的包装类 */
 class ProcessPack {
-  /** @prop {Number|String} Target 目标进程的PID或者Name */
+  /** @type {Number|String} 目标进程的PID或者Name */
   Target := unset
   /** 实例化进程操作对象
    * @overload (PID)
@@ -24,19 +24,19 @@ class ProcessPack {
   __New(Target) {
     this.Target := Target
   }
-  /** @prop {Number} 进程ID */
+  /** @type {Number} 进程ID */
   ID {
     get => this.Exist()
   }
-  /** @prop {Number} 进程ID */
+  /** @type {Number} 进程ID */
   PID {
     get => this.Exist()
   }
-  /** @prop {String} Name 获取进程名(不包含路径)  */
+  /** @type {String} 获取进程名(不包含路径)  */
   Name {
     get => this.GetName()
   }
-  /** @prop {String} Path 获取进程路径 */
+  /** @type {String} 获取进程路径 */
   Path {
     get => this.GetPath()
   }

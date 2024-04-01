@@ -10,7 +10,7 @@
 
 class NativePointer extends NativeType {
 
-  /** @prop {VarRef} Pointer 指向(this.Value)的指针 */
+  /** @type {VarRef} 指向(this.Value)的指针 */
   Pointer := unset
   /**
    * @param {String} Type  Str | WStr | AStr | Int64 | Int | Short |

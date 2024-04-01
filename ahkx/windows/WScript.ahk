@@ -10,10 +10,10 @@
 
 class WScript {
 
-  /** @prop {String} FullName  返回主机可执行文件（CScript.exe 或 WScript.exe）的完全限定路径 */
+  /** @type {String}  返回主机可执行文件（CScript.exe 或 WScript.exe）的完全限定路径 */
   FullName := unset
 
-  /** @prop {String} Name WScript 对象（主机可执行文件）的名称 */
+  /** @type {String} WScript 对象（主机可执行文件）的名称 */
   Name := unset
 
   /**
@@ -34,16 +34,16 @@ class WScript {
   Echo(Command) {
   }
   class Exec {
-    /** @prop {'WshFailed'=2|'WshFinished'=1|'WshRunning'=0} Status*/
+    /** @type {'WshFailed'=2|'WshFinished'=1|'WshRunning'=0} */
     Status := unset
     ExitCode := unset
     ProcessID := unset
 
-    /** @prop {WScript.Exec.StdIn} StdIn */
+    /** @type {WScript.Exec.StdIn} */
     StdIn := unset
-    /** @prop {WScript.Exec.StdOut} StdOut */
+    /** @type {WScript.Exec.StdOut} */
     StdOut := unset
-    /** @prop {WScript.Exec.StdErr} StdErr */
+    /** @type {WScript.Exec.StdErr} */
     StdErr := unset
     Terminate() {
     }

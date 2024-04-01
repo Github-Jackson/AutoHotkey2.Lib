@@ -3,7 +3,7 @@
 
 /** 使用默认设置创建{Application}配置对象, 初始化应用程序 */
 class Setup {
-  /** @prop {String} config 配置文件路径 */
+  /** @type {String} 配置文件路径 */
   config:= '.config'
 
   __New() {

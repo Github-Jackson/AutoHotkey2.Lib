@@ -9,11 +9,11 @@
 /** 扩展File类 */
 class FileProxy {
 
-  /** @prop {String} Filename 文件名 */
+  /** @type {String} 文件名 */
   Filename := unset
-  /** @prop {String} Flags 访问模式 */
+  /** @type {String} 访问模式 */
   Flags := unset
-  /** @prop {File} File */
+  /** @type {File} */
   File := unset
   /** New */
   __New() {
@@ -82,9 +82,9 @@ class FileProxy {
     return proxy
   }
   class File extends File {
-    /** @prop {String} Filename 文件名 */
+    /** @type {String} 文件名 */
     Filename := unset
-    /** @prop {String} Flags 访问模式 */
+    /** @type {String} 访问模式 */
     Flags := unset
 
     /** 打开文件, 从其中读取特定内容和/或将新内容写入其中.

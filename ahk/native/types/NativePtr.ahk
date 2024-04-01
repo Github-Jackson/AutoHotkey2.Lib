@@ -15,7 +15,7 @@
  * @extends {NativeType}
  */
 class NativePtr extends NativeType {
-  /** @prop {String} Type Ptr */
+  /** @type {String} Ptr */
   static Type := NativeType.Ptr
   /** 
    * @param {Number} Value 等同于Int或Int64, 要传递NULL句柄或指针, 请指定整数 0
