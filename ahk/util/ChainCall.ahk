@@ -31,7 +31,7 @@ class ChainCall {
 
   /** 构建链式调用
    * @param {Object|()=>Void} Value 
-   * @returns {ChainCall} Vlaue的代理对象或为{Primitive}基础类型设置.Base.Call
+   * @returns {ChainCall.Proxy} Vlaue的代理对象或为{Primitive}基础类型设置.Base.Call
    */
   static Call(Value) {
     Call(this, Call) {
@@ -51,3 +51,4 @@ class ChainCall {
     return Value
   }
 }
+
