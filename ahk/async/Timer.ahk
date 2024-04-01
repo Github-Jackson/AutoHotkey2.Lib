@@ -16,7 +16,7 @@ class Timer {
   Priority := unset
   /** @prop {Number} Period 执行周期(毫秒) */
   Period := unset
-  /** @prop {Number} 设置启动延迟(毫秒) */
+  /** @prop {Number} Delay 设置启动延迟(毫秒) */
   Delay := 0
 
   /** 初始化Timer并注册(SetTimer)定时器
