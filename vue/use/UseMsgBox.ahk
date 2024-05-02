@@ -6,11 +6,12 @@
  * @version 0.0.1
  ***********************************************************************/
 #Include <vue\Vue>
+#Include <vue\Watch>
 #Include <vue\Reactive>
 
 class UseMsgBox {
   /**
-   * @overload (Msg)=> Vue.Reactive
+   * @overload (Msg)=> UseMsgBox.Msg
    * @param {UseMsgBox.Msg} Msg 
    * @param Text 
    * @param Title 
