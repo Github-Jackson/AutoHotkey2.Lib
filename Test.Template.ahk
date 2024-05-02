@@ -73,5 +73,5 @@ TestExecTime() {
 }
 
 #SuspendExempt true
-#P:: Suspend
-#R:: Reload
+#P:: Suspend()
+#R:: Reload()
